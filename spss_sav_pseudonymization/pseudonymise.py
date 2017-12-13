@@ -24,18 +24,20 @@ import click
 @click.option('-o', '--output-file', type=str, help='Output file for the pseudonymised sav.')
 @click.option('-m', '--mapping-file', type=str, help='Reuse a previously generated mapping file.')
 @click.version_option(version='Pseudonymizer for SPSS SAV files.')
-def pseudonymise(input_file: str,
-                 columns: str = None,
-                 names: str = None,
-                 mapping_file: str = None,
-                 output_file: str = None):
+def pseudonymise(input_file,
+                 columns=None,
+                 names=None,
+                 mapping_file=None,
+                 output_file=None):
     """
     Create UUID integer for certain columns of an SAV file. If no columns are selected (either by name  '-n' or by
     number '-c') then automatically the first column is selected for pseudonymisation.
 
+    \b
     :param input_file: points to input SAV file.
     :param columns: columns by number to pseudonymise, can be comma separated list (e.g. 0,5,7).
-    :param names: columns by name to pseudonymise. Comma separated list (e.g. 'PIDnumber,PIDnumberRelation,OtherPID')
+    :param names: columns by name to pseudonymise. Given as a comma separated
+        list (e.g. 'PIDnumber,PIDnumberRelation,OtherPID')
     :param mapping_file: file with a previously created mapping. Reuses the pseudonymisation
         and adds mappings for new numbers.
     :param output_file: path to output file, defaults to same directory as input sav with

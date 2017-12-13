@@ -3,7 +3,7 @@
 
 import setuptools
 
-version_string = '0.5'
+version_string = '0.6'
 
 with open("requirements.txt", 'r') as f:
     required_packages = f.read().splitlines()
@@ -32,8 +32,11 @@ setuptools.setup(
 
     classifiers=[
         'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
+        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
 )
