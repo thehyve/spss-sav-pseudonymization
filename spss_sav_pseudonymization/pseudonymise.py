@@ -5,15 +5,13 @@
 """
 pseudonymise.py
 
-Brief: replaces numbers in a given SAV file with a randomly chosen
-numbers using UUID randomizer.
+Brief: replaces numbers in a given SAV file with randomly chosen
+numbers using a UUID generator.
 
 Author: Jochem Bijlard <jochem@thehyve.nl>
 
 """
 
-import savReaderWriter
-from uuid import uuid4
 import click
 
 
@@ -43,6 +41,16 @@ def pseudonymise(input_file,
     :param output_file: path to output file, defaults to same directory as input sav with
         suffix '-pseudonymised.sav'.
     """
+
+    import sys
+    import os
+    from uuid import uuid4
+
+    # Trick to prevent savReaderWriter from complaining in stdout about
+    # missing numpy, which it does not need.
+    sys.stdout = open(os.devnull, 'w')
+    import savReaderWriter
+    sys.stdout = sys.__stdout__
 
     uuid_map = {}
     if mapping_file:
