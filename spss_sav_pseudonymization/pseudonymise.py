@@ -37,7 +37,7 @@ def pseudonymise(input_file: str,
     :param columns: columns by number to pseudonymise, can be comma separated list (e.g. 0,5,7).
     :param names: columns by name to pseudonymise. Comma separated list (e.g. 'PIDnumber,PIDnumberRelation,OtherPID')
     :param mapping_file: file with a previously created mapping. Reuses the pseudonymisation
-       and adds mappings for new numbers.
+        and adds mappings for new numbers.
     :param output_file: path to output file, defaults to same directory as input sav with
         suffix '-pseudonymised.sav'.
     """
