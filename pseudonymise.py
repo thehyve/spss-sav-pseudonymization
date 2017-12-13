@@ -1,6 +1,16 @@
-#!/usr/bin/env python
+#! /usr/bin/env python3
 # -*- coding: utf-8 -*-
+# :noTabs=true:
+# (c) Copyright (c) 2017  The Hyve
+"""
+pseudonymise.py
 
+Brief: replaces numbers in a given SAV file with a randomly chosen
+numbers using UUID randomizer.
+
+Author: Jochem Bijlard <jochem@thehyve.nl>
+
+"""
 
 import savReaderWriter
 from uuid import uuid4
