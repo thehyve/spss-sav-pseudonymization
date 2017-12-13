@@ -3,7 +3,7 @@
 
 import setuptools
 
-version_string = '0.6'
+version_string = '0.7'
 
 with open("requirements.txt", 'r') as f:
     required_packages = f.read().splitlines()

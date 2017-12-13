@@ -30,6 +30,7 @@ or..
     $   python setup.py install
 
 .. note::
+
     Depending on your platform, you have to configure SavReaderWriter with
     some additional steps. See `here <https://pythonhosted.org/savReaderWriter/>`_
     for its documentation.
@@ -39,8 +40,8 @@ Requirements
 
 These dependencies will have to be installed:
 
- - savReaderWriter==3.4.2
- - click==6.7
+-   savReaderWriter==3.4.2
+-   click==6.7
 
 Example usage
 -------------
